@@ -64,7 +64,12 @@
       
       <div class="col-lg-4 col-md-5">
         <!-- <div class="avatar hover-effect bg-white shadow-sm p-1"><img src="images/avatar.jpg" width="200" height="200"/></div>  --> 
-        <div class="avatar hover-effect bg-white shadow-sm p-1"><video src="images\test_me.mp4" type="video/mp4" controls width="200" height="200"></video></div>
+        <!-- <div class="avatar hover-effect bg-white shadow-sm p-1"><video src="images\test_me.mp4" type="video/mp4" controls width="200" height="200"></video></div> -->
+        <div class="avatar hover-effect bg-white shadow-sm p-1">
+        <video id="video-id" width="470" height="255" poster="images/avatar.jpg">
+          <source src="images\test_me.mp4" type="video/mp4">        
+        </video></div>
+
       </div>
 
       <div class="col-lg-8 col-md-7 text-center text-md-start">
@@ -348,4 +353,35 @@
     <script src="scripts/aos.js?ver=1.2.0"></script>
     <script src="scripts/main.js?ver=1.2.0"></script>
   </body>
+
+  $(document).ready(function(){ 
+    $('#video-id,.demo-play-btn').click(function(){ 
+      $('#video-id').get(0).paused ? $('#video-id').get(0).play() : $('#video-id').get(0).pause(); 
+      $(".demo-play-btn").toggle();
+    }); 
+  });
+  
+  .demo-play-btn{
+    position:absolute;
+    top:35%;
+    background:#fff;
+    left:35%;
+    cursor:pointer;
+  }
+  .demo-play-btn img{
+    width:50px;
+  }
+  
+     
+  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <div class="demo-video">
+        <video id="video-id" width="470" height="255" poster="https://i.ytimg.com/vi/5Peo-ivmupE/maxresdefault.jpg">
+           <source src="https://st2.depositphotos.com/4083751/6003/v/600/depositphotos_60037637-stock-video-toddler-with-bottle-and-dummy.mp4" type="video/mp4">        
+         </video>
+         <div class="demo-play-btn">
+             <img src="https://lh3.googleusercontent.com/proxy/9Oa4tg5B3DLeqAIsO_qRhmQg_pqtW3RtwBQJYdcv4e44lGfl4UReTpWpe5TDjlyJU3254RakFD48FPfsALnBI2cD6wxt8zMRNtrGEytVkMDHfLxBdiOG7JU-m0csf5RC6AY" class="play-btn" title="Play Video">
+         </div>
+   </div>
+
 </html>
