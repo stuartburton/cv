@@ -1,7 +1,9 @@
 # cv
 
-The web version of my CV; last updated Dec 2024.
+Stuart Burton - Solutions Architect
 
-Stuart Burton - Senior Solutions Architect
+The web version of my CV. Last updated June 2026. Hosted in Github using GitHub Actions.
+
+Please reach out if you have an enquiries.
 
 https://stuartburton.github.io/cv/
